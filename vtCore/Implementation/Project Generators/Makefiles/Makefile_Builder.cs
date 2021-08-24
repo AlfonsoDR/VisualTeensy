@@ -9,7 +9,7 @@ namespace vtCore
 {
     static internal class Makefile_Builder
     {
-        static public string generate(IProject project, LibManager libManager, SetupData setup)
+        static public string generate(IProject project, SetupData setup)
         {
             var cfg = project.selectedConfiguration;
             var board = cfg.selectedBoard;

@@ -240,7 +240,7 @@ namespace vtCore
             }
             done = false;
 
-            this.project = project;
+            //this.project = project;
         }
 
         public Func<Task> action => async () =>
@@ -258,7 +258,7 @@ namespace vtCore
 
         private readonly FileInfo mainSketch;
         private readonly string fileContent;
-        private readonly IProject project;
+        //private readonly IProject project;
     }
 
     //--------------------------------------------------------------------------------------------
@@ -320,9 +320,9 @@ namespace vtCore
             }            
             status = "OK";
         };
-               
-        GitLibrary coreLib;
-        IProject project;
+
+        private readonly GitLibrary coreLib;
+        private readonly IProject project;
     }
 
 

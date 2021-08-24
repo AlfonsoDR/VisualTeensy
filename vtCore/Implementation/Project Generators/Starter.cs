@@ -15,7 +15,7 @@ namespace vtCore
             vsCode.Start();
             return;
         }
-        static public void start_atom(string folder, string file)
+        static public void start_atom(string folder)
         {
             var vsCode = new Process();
             vsCode.StartInfo.FileName = "cmd";

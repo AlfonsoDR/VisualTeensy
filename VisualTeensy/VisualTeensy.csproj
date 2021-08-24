@@ -246,6 +246,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Embedded\makefile_builder" />
+    <EmbeddedResource Include="Embedded\makefile_make" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -294,13 +296,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Embedded\makefile_make" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\rubbish-bin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Embedded\makefile_builder" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vtCore\vtCore.csproj">

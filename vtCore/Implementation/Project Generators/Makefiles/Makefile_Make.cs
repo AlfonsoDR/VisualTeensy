@@ -435,7 +435,7 @@ namespace vtCore
             return $"{(char)27}[38;2;{c.R};{c.G};{c.B}m";
         }
 
-        private static string colReset = $"{(char)27}[0m";
+        private static readonly string colReset = $"{(char)27}[0m";
     }
 }
 

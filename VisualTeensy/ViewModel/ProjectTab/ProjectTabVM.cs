@@ -319,9 +319,9 @@ namespace ViewModel
             MessageHandler?.Invoke(this, message);
         }
         public IProject project;
-        LibManager libManager;
-        SetupData setup;
 
+        private readonly LibManager libManager;
+        private readonly SetupData setup;
 
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
     }

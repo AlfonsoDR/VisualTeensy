@@ -86,7 +86,7 @@ namespace vtCore
 
             progressHandler.Report("Start ATOM");
             await Task.Delay(1);
-            Starter.start_atom(project.path, mainFile);
+            Starter.start_atom(project.path);
             progressHandler.Report("OK");
         }
 

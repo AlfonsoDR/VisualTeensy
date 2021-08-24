@@ -6,7 +6,7 @@ using vtCore.Interfaces;
 
 namespace vtCore
 {
-    class libTransfer
+    class LibTransfer
     {
         public string name { get; set; }
     }
@@ -57,10 +57,11 @@ namespace vtCore
 
         static ILibrary parseLibProps(string libFolder)
         {
-            var lib = new Library();
+            var lib = new Library
+            {
+                sourceUri = new Uri(libFolder)
+            };
 
-            lib.sourceUri = new Uri(libFolder);
-            
             var libProps = Path.Combine(libFolder, "library.properties");
 
             if (File.Exists(libProps))

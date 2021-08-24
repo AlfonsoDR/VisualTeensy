@@ -16,7 +16,7 @@ namespace vtCore
             }
             else
             {
-                return Makefile_Builder.generate(project, libManager, setup);
+                return Makefile_Builder.generate(project, setup);
             }
         }
 

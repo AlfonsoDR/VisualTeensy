@@ -32,20 +32,20 @@ namespace vtCore
         {
             if (alreadyCloned) return GitError.OK;
 
+
             try
             {
                 if (Directory.Exists(targetFolder))
                 {
                     log.Info($"{targetFolder} doesn't contain a valid repository -> delete");
-                    Directory.Delete(targetFolder, true);  
-
+                    Directory.Delete(targetFolder, true);
                 }
                 await Task.Run(() => Repository.Clone(url, targetFolder));
                 return GitError.OK;
             }
-            catch (Exception ex)
-            {
-                log.Error(ex.Message, ex);
+            catch (Exception exx)
+            {               
+                log.Error(exx.Message, exx);
                 return GitError.Unexpected;
             }
         }

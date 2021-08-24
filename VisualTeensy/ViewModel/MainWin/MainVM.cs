@@ -34,8 +34,7 @@ namespace ViewModel
 
         void doFileOpen(object path)
         {
-            string prj = path as string;
-            if (prj != null)
+            if (path is string prj)
             {
                 project.openProject(prj);
                 setup.mru.AddProject(prj);

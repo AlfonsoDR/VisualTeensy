@@ -8,7 +8,7 @@ namespace vtCore
 {
     static class TaskFile_vsCode
     {
-        class task
+        class Task
         {
             public string label { get; set; }
             public Group group { get; set; } = new Group();
@@ -22,15 +22,15 @@ namespace vtCore
             string j = project.buildSystem == BuildSystem.makefile ? "-j" : "";
             string O = project.buildSystem == BuildSystem.makefile ? "-Otarget" : "";
 
-            var tasks = new List<task>()
+            var tasks = new List<Task>()
             {    
-                 new task
+                 new Task
                  {
                      command = make,
                      label = "Build",
                      args = new List<string> { "all", j, O },
                  },
-                 new task
+                 new Task
                  {
                      command = make,
                      label = "Clean",
@@ -40,7 +40,7 @@ namespace vtCore
 
             if (!String.IsNullOrWhiteSpace(setup.uplPjrcBase.path))
             {
-                tasks.Add(new task
+                tasks.Add(new Task
                 {
                     command = make,
                     label = "Upload (teensy.exe)",
@@ -49,7 +49,7 @@ namespace vtCore
             }
             if (!String.IsNullOrWhiteSpace(setup.uplTyBase.path))
             {
-                tasks.Add(new task
+                tasks.Add(new Task
                 {
                     command = make,
                     label = "Upload (TyCommander)",
@@ -58,7 +58,7 @@ namespace vtCore
             }
             if (!String.IsNullOrWhiteSpace(setup.uplJLinkBase.path))
             {
-                tasks.Add(new task
+                tasks.Add(new Task
                 {
                     command = make,
                     label = "Upload (JLink)",
@@ -67,7 +67,7 @@ namespace vtCore
             }
             if (!String.IsNullOrWhiteSpace(setup.uplCLIBase.path))
             {
-                tasks.Add(new task
+                tasks.Add(new Task
                 {
                     command = make,
                     label = "Upload (CLI)",

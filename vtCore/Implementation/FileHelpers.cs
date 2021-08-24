@@ -112,27 +112,28 @@ namespace vtCore
 
         // Download libraries ----------------------------
 
-        private static bool isArduinoFolder(string folder)
-        {
-            if (folder == null || !Directory.Exists(folder))
-            {
-                return false;
-            }
+        //private static bool isArduinoFolder(string folder)
+        //{
+        //    if (folder == null || !Directory.Exists(folder))
+        //    {
+        //        return false;
+        //    }
 
-            var arduinoExe = Path.Combine(folder, "arduino.exe");
-            if (!File.Exists(arduinoExe))
-            {
-                return false;
-            }
+        //    var arduinoExe = Path.Combine(folder, "arduino.exe");
+        //    if (!File.Exists(arduinoExe))
+        //    {
+        //        return false;
+        //    }
 
-            //var boardsTxt = Path.Combine(folder, "hardware", "teensy", "avr", "boards.txt");
-            //if (!File.Exists(boardsTxt))
-            //{
-            //    return false;
-            //}
+        //    //var boardsTxt = Path.Combine(folder, "hardware", "teensy", "avr", "boards.txt");
+        //    //if (!File.Exists(boardsTxt))
+        //    //{
+        //    //    return false;
+        //    //}
 
-            return true;
-        }
+        //    return true;
+        //}
+
         private static bool isTyToolsFolder(string folder)
         {
             if (String.IsNullOrWhiteSpace(folder) || Path.GetFileName(folder) != "TyTools" || !Directory.Exists(folder))
@@ -219,7 +220,7 @@ namespace vtCore
         {
             if (File.Exists(target))
             {
-                var exp = DateTime.Now - File.GetLastWriteTime(target);
+                //var exp = DateTime.Now - File.GetLastWriteTime(target);
 
                 if ((DateTime.Now - File.GetLastWriteTime(target)) < expiry)
                 {
