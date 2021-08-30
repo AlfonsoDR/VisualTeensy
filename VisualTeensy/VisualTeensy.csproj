@@ -137,6 +137,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\LibExamplesTab\LibExamplesTabVM.cs" />
     <Compile Include="ViewModel\LibrariesTab\LibrariesTabVM.cs" />
     <Compile Include="ViewModel\LibrariesTab\RepositoryVM.cs" />
     <Compile Include="ViewModel\LibrariesTab\LibraryVM.cs" />
@@ -149,6 +150,9 @@
     <Compile Include="Views\Converters\ColorBrushConverter.cs" />
     <Compile Include="Views\FileDisplayWindow.xaml.cs">
       <DependentUpon>FileDisplayWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LibExamplesTab.xaml.cs">
+      <DependentUpon>LibExamplesTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LibInfoWin.xaml.cs">
       <DependentUpon>LibInfoWin.xaml</DependentUpon>
@@ -188,6 +192,10 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="Views\Converters\WaitCursorConverter.cs" />
     <Page Include="Views\FileDisplayWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LibExamplesTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

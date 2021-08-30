@@ -134,6 +134,16 @@
                 <local:ProjectTab DataContext="{Binding  projecTabVM, Mode=OneWay}"/>
             </TabItem>
 
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" >
+                        <md:PackIcon Kind="Library" Margin="0,0,5,0" Foreground= "#FF464646"/>
+                        <TextBlock Text="Library Mode Examples"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <local:LibExamplesTab DataContext="{Binding libExamplesTabVM, Mode=OneWay}"/>
+            </TabItem>
+
             <TabItem  Selector.IsSelected="False" Visibility="{Binding setupTabVM.isMakefileBuild, Converter={StaticResource BooleanToVisibilityConverter}}">
                 <TabItem.Header>
                     <StackPanel Orientation="Horizontal" >

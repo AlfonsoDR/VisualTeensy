@@ -28,6 +28,8 @@ namespace ViewModel
         public ProjectTabVM projecTabVM { get; }
         public LibrariesTabVM librariesTabVM { get; }
 
+        public LibExamplesTabVM libExamplesTabVM { get; }
+
         public RelayCommand cmdFileOpen { get; set; }
 
         public ObservableCollection<MruItemVM> mruList { get; } = new ObservableCollection<MruItemVM>();
@@ -100,6 +102,7 @@ namespace ViewModel
             projecTabVM = new ProjectTabVM(project, libManager, setup);
             setupTabVM = new SetupTabVM(project, setup);
             librariesTabVM = new LibrariesTabVM(project, libManager, setup);
+            libExamplesTabVM = new LibExamplesTabVM(project, setup);
 
             cmdFileOpen = new RelayCommand(doFileOpen);
             cmdFileNew = new RelayCommand(doFileNew);
